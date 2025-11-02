@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { StyledLink } from '../components/styled-components/route'
 
 export const GithubProfile = () => {
-    return <Link to="https://github.com/Heena-Codes" target="_blank">Github</Link>
+    return <StyledLink to="https://github.com/Heena-Codes" target="_blank">Github</StyledLink>
 }

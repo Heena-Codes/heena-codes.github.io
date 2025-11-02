@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { StyledLink } from '../components/styled-components/route'
 
 export const PressProfile = () => {
-    return <Link to="/press">Press</Link>
+    return <StyledLink to="/press">Press</StyledLink>
 }

@@ -1,15 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { StyledH1Header, StyledH2Header, StyledHeader, StyledImageSpan, StyledWrapper } from './styled-components/toolbar';
+import { Image } from './core/Image';
+import { StyledImageLink } from './styled-components/route';
 
 interface MainPageContent {
     text: string;
     link?: string | null;
+    type?: 'H1' |'H2'
 }
 export const MainHomePageContent = () => {
     const aboutMe: MainPageContent[]  = [{
-        text: 'Heena Gupta'
+        text: 'Heena Gupta',
+        type: 'H1'
     }, {
-        text: 'Engineering Leader'
+        text: 'Engineering Leader',
+        type: 'H2'
     }]
     const aboutMeDetails: MainPageContent[] = [{
         text: 'Heena Gupta is a '
@@ -39,13 +45,22 @@ export const MainHomePageContent = () => {
 ]
     return <div>
         {
-            aboutMe.map(aboutMeItem => <div>{aboutMeItem.text} </div>)
+            aboutMe.map(aboutMeItem => aboutMeItem.type === 'H1' ? <StyledH1Header>{aboutMeItem.text} </StyledH1Header> : <StyledH2Header>{aboutMeItem.text}</StyledH2Header>)
         }
-        <div>
+        <div style={{ display: 'flex', width: '100%' }}>
+        <div style={{ width: '60%' }}>
             {
-            aboutMeDetails.map(aboutMeItem => aboutMeItem.link ? <Link to={aboutMeItem.link}>{aboutMeItem.text}</Link> : <span>{aboutMeItem.text} </span>)
-
+            aboutMeDetails.map(aboutMeItem => aboutMeItem.link ? <StyledImageLink to={aboutMeItem.link}>{aboutMeItem.text}</StyledImageLink> : <StyledImageSpan>{aboutMeItem.text} </StyledImageSpan>)
             }
         </div>
+        <StyledWrapper>
+        <Image 
+  src="https://media.licdn.com/dms/image/v2/D5603AQFOoWk_mi9DrA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1719421504087?e=1763596800&v=beta&t=zWpHjbYmtG3vI3z92S1KGNy2NRQlWIOuh-amMTmSUhA" 
+  alt="Heena Gupta" 
+/>
+        </StyledWrapper>
+        </div>
+
+
     </div>
 }

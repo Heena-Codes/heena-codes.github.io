@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { StyledLink } from '../components/styled-components/route'
 
 export const LinkedInProfile = () => {
-    return <Link to="https://www.linkedin.com/in/heena-gupta-a183ba99/" target="_blank">LinkedIn</Link>
+    return <StyledLink to="https://www.linkedin.com/in/heena-gupta-a183ba99/" target="_blank">LinkedIn</StyledLink>
 }

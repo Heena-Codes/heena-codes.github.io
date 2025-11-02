@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { StyledLink } from '../components/styled-components/route'
 
 export const BlogProfile = () => {
-    return <Link to="/blog">Blog</Link>
+    return <StyledLink to="/blog">Blog</StyledLink>
 }

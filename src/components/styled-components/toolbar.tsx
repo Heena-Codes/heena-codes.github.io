@@ -1,8 +1,22 @@
 import styled from 'styled-components';
 export const StyledHeader = styled.div`
-  padding: 10px 0;
+  padding: 40px;
+  color: white
 `;
 
+export const StyledH1Header = styled.h1`
+font-size: 5rem;
+letter-spacing: -4.48px;
+line-height: 79px;
+`
+
+export const StyledH2Header = styled.h2`
+opacity: 0.64;
+font-size: 1.5rem;
+color: #FFFFFF;
+letter-spacing: -0.51px;
+margin-top: 4px;
+`
 export const StyledWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -12,9 +26,12 @@ export const StyledWrapper = styled.div`
 
 export const StyledLinks = styled.div`
   display: flex;
-  width: 40%;
-  margin-left: 50%;
-  justify-content: space-between;
+  justify-content: end;
+  font-size: 13px;
+  color: white;
+  :hover {
+      color: #5badf0;
+    }
 `;
 
 export const StyledAnchor = styled.a`
@@ -25,5 +42,14 @@ color: #D9E3EA;
 font-size: 13px;
 line-height: 1.35;
 border-radius: 3px;
+text-decoration: none;
+transition: all 0.3s ease;
 `
 //  background-color: #0f1113;
+
+export const StyledImageSpan = styled.span`
+    color: white;
+    line-height: 120%;
+    margin-top: 16px;
+    margin-right: 16px;`
+
