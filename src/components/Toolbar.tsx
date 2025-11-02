@@ -4,13 +4,14 @@ import { PressProfile } from '../routes/Press'
 import { BlogProfile } from '../routes/Blog'
 import { BiographyProfile } from '../routes/Biography'
 import { LinkedInProfile } from '../routes/LinkedIn'
+import { StyledLinks } from './styled-components/toolbar'
 
 export const Toolbar = () => {
-    return <div>
+    return <StyledLinks>
         <GithubProfile />
         <PressProfile />
         <BiographyProfile />
         <LinkedInProfile />
         <BlogProfile />
-    </div>
+    </StyledLinks>
 }

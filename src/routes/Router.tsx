@@ -11,7 +11,7 @@ import { Blog } from "../page/Blog";
 
 export const MainRouter = () => {
     return <>
-        <Router>
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/press" element={<Press />} />
