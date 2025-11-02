@@ -13,7 +13,11 @@ font-size: 5rem;
 letter-spacing: -4.48px;
 line-height: 79px;
 `
-
+export const StyledH3Header = styled.h3`
+font-size: 1.5rem;
+letter-spacing: -0.51px;
+margin-top: 4px;
+`
 export const StyledH2Header = styled.h2`
 opacity: 0.64;
 font-size: 1.5rem;
