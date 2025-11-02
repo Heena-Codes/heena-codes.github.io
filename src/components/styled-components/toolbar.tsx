@@ -4,6 +4,10 @@ export const StyledHeader = styled.div`
   color: white
 `;
 
+export const StyledSpacingDiv = styled.div`
+    padding: 40px;
+`
+
 export const StyledH1Header = styled.h1`
 font-size: 5rem;
 letter-spacing: -4.48px;
@@ -38,7 +42,7 @@ export const StyledAnchor = styled.a`
 top: 8px;
 right: 6px;
 padding: 8px 12px;
-color: #D9E3EA;
+color:rgb(76, 106, 127);
 font-size: 13px;
 line-height: 1.35;
 border-radius: 3px;

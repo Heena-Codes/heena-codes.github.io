@@ -5,7 +5,7 @@ export const StyledLink = styled(Link)`
     top: 8px;
     right: 6px;
     padding: 8px 12px;
-    color: #D9E3EA;
+    color: rgb(76, 106, 127);
     font-size: 13px;
     /* font-weight: bold; */
     line-height: 1.35;

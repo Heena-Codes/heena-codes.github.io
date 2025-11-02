@@ -1,0 +1,18 @@
+import React from 'react'
+
+export const AboutMe = () => {
+    return <div>
+        <div>
+        Heena completed her Bachelor of Technology from Delhi Technological University, 2011-2015 in computer engineering. She likes to code and learn new technologies apart from mentoring her juniors. She was a Season of KDE, 2012 student developer in which she started her contributions to KDE which is an open-source organization for K-Desktop Environment-related projects. This helped her gain the best practices followed by developers across the globe for development. She also contributed to the KDE organization as a Google Summer of Code student developer in, 2013 where she contributed to the KDE Plasma team and played a crucial role in revamping plasmoids applications. Later, she also mentored new KDE contributors as a Google Code-In, 2013 mentor and made the KDE community, even more, stronger by her diligent demonstration of mentorship skills. She was also one of the co-administrator and mentors for Search of KDE, 2014, and Google Code-In, 2014. She has represented the KDE organization in various Google Summer of Code knowledge sharing sessions held in DTU. She also presented KDE plasma projects in FOSSASIA 2015, Singapore. She also organized a Google Summer of Code meetup in Delhi which was featured in the Google open source blog.
+ 
+ Apart from her open-source contributions, she has over five years of work experience as a software developer. She has worked in start-ups such as Paytm, Shipsy as well as corporates such as Expedia and Indus Valley Partners. She is always eager to learn about new skill sets and work on diverse sets of projects. She is currently working at Expedia as a Software Development Engineer III for Flights. She is one of the service owners for flight progressive web applications. She has done several pipeline improvements for an efficient release process and is responsible for ensuring timely releases using the release pipeline for the same. She is a part of a flights performance project where she shares a crucial role in making the flight’s progressive web application performance efficient. She spends her workday taking care of releases, contributing to the flight’s codebase, mentoring new joiners, and looking into any ongoing production support issue or pipeline issue.  She has presented on “Portfolio Management through storytelling using narrative visualizations with advanced filtering” in Hong Kong Open Source Conference, 2017 to showcase her work done in Indus Valley Partners regarding data visualization. She also presented a poster on “Optimal financial planning through storytelling using narrative visualizations with advanced filtering“ in Grace Hopper Conference India, 2017. She was also a mentor in “Learn IT, Girl” 2015 in which she mentored female developers to contribute to open source organizations such as KDE.
+  
+ Being a Google Summer of Code student developer, mentor, and co-administrator in Google Code-In for KDE and Season of KDE Heena made several open-source contributions for KDE.  She has presented about her KDE contributions in FOSSASIA, Portfolio Management through storytelling using narrative visualizations with advanced filtering in Hong Kong Open Source Conference, and a poster presentation on Optimal financial planning through storytelling using narrative visualizations with advanced filtering in Grace Hopper Conference India. 
+ 
+ With her achievements and ability to mentor and encourage young females, she is creating an impact in tech and hence creates a strong impact socially on diversity and inclusion.
+  
+ 
+ 
+        </div>
+    </div>
+}

@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import { StyledH1Header, StyledH2Header, StyledHeader, StyledImageSpan, StyledWrapper } from './styled-components/toolbar';
+import { StyledH1Header, StyledH2Header, StyledImageSpan, StyledWrapper } from './styled-components/toolbar';
 import { Image } from './core/Image';
 import { StyledImageLink } from './styled-components/route';
 
@@ -20,10 +19,10 @@ export const MainHomePageContent = () => {
     const aboutMeDetails: MainPageContent[] = [{
         text: 'Heena Gupta is a '
     }, {
-        text: 'Software Engineer ',
+        text: 'Software Engineer',
         link: 'https://www.linkedin.com/in/heena-gupta-a183ba99/'
     }, {
-       text: 'and leader currently working at ' 
+       text: 'and leader currently working at' 
     }, {
         text: 'Expedia Group ',
         link: 'https://www.expedia.com/'
@@ -32,11 +31,11 @@ export const MainHomePageContent = () => {
     }, {
         text: 'With +10 years of experience and +5 years at Expedia Group, she is passionate about Web, Performance and Quality.'
     }, {
-        text: 'She is reachable on '
+        text: 'She is reachable on'
     }, {
-        text: 'LinkedIn, ',
+        text: 'LinkedIn',
         link: 'https://www.linkedin.com/in/heena-gupta-a183ba99/'
-    }, {
+    }, { text: ' and' }, {
         text: 'Medium. ',
         link: 'https://medium.com/@heena_gupta_93'
     }, {
@@ -53,7 +52,7 @@ export const MainHomePageContent = () => {
             aboutMeDetails.map(aboutMeItem => aboutMeItem.link ? <StyledImageLink to={aboutMeItem.link}>{aboutMeItem.text}</StyledImageLink> : <StyledImageSpan>{aboutMeItem.text} </StyledImageSpan>)
             }
         </div>
-        <StyledWrapper>
+        <StyledWrapper style={{ width: '40%', justifyContent: 'flex-end'}}>
         <Image 
   src="https://media.licdn.com/dms/image/v2/D5603AQFOoWk_mi9DrA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1719421504087?e=1763596800&v=beta&t=zWpHjbYmtG3vI3z92S1KGNy2NRQlWIOuh-amMTmSUhA" 
   alt="Heena Gupta" 
