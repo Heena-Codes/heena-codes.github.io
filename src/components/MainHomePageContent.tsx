@@ -19,21 +19,21 @@ export const MainHomePageContent = () => {
     }]
 
     return <div>
-        {
-            aboutMe.map(aboutMeItem => aboutMeItem.type === 'H1' ? <StyledH1Header>{aboutMeItem.text} </StyledH1Header> : <StyledH2Header>{aboutMeItem.text}</StyledH2Header>)
-        }
-        <div style={{ display: 'flex', width: '100%', gap: '20px' }}>
-        <div style={{ flex: '1' }}>
-        <Contributions />
+        <div style={{ display: 'flex', width: '100%', alignItems: 'flex-start', gap: '20px', marginBottom: '20px' }}>
+            <div style={{ flex: '1' }}>
+                {
+                    aboutMe.map(aboutMeItem => aboutMeItem.type === 'H1' ? <StyledH1Header>{aboutMeItem.text} </StyledH1Header> : <StyledH2Header>{aboutMeItem.text}</StyledH2Header>)
+                }
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
+                <Image 
+                    src="./heena.png"
+                    alt="Heena Gupta" 
+                />
+            </div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
-        <Image 
-        src="./heena.png"
-  alt="Heena Gupta" 
-/>
+        <div style={{ width: '100%' }}>
+            <Contributions />
         </div>
-        </div>
-
-
     </div>
 }
