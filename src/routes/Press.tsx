@@ -1,10 +1,10 @@
 import React from 'react'
-import { StyledLink } from '../components/styled-components/route'
+import { StyledNavLink } from '../components/styled-components/route'
 
 export const PressProfile = () => {
-    return <StyledLink to="/press">Press</StyledLink>
+    return <StyledNavLink to="/press">Press</StyledNavLink>
 }
 
 export const HomeProfile = () => {
-    return <StyledLink to='/'>Home</StyledLink>
+    return <StyledNavLink to='/' end>Home</StyledNavLink>
 }

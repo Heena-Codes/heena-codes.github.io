@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 export const StyledHeader = styled.div`
   padding: 40px;
-  color: white
+  color: #1a1a1a;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
 `;
 
 export const StyledSpacingDiv = styled.div`
@@ -9,9 +10,13 @@ export const StyledSpacingDiv = styled.div`
 `
 
 export const StyledH1Header = styled.h1`
-font-size: 5rem;
-letter-spacing: -4.48px;
-line-height: 79px;
+font-size: 3.5rem;
+letter-spacing: -1px;
+line-height: 1.2;
+color: #1a1a1a;
+font-weight: 400;
+font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+margin-bottom: 8px;
 `
 export const StyledH3Header = styled.h3`
 font-size: 1.5rem;
@@ -19,11 +24,13 @@ letter-spacing: -0.51px;
 margin-top: 4px;
 `
 export const StyledH2Header = styled.h2`
-opacity: 0.64;
-font-size: 1.5rem;
-color: #FFFFFF;
-letter-spacing: -0.51px;
+font-size: 1.2rem;
+color: #666;
+letter-spacing: 0;
 margin-top: 4px;
+font-weight: 300;
+font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+opacity: 0.9;
 `
 export const StyledWrapper = styled.div`
   display: flex;
@@ -36,9 +43,13 @@ export const StyledLinks = styled.div`
   display: flex;
   justify-content: end;
   font-size: 13px;
-  color: white;
+  color: #666;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-weight: 400;
+  gap: 16px;
+  
   :hover {
-      color: #5badf0;
+      color: #1a1a1a;
     }
 `;
 
@@ -56,7 +67,7 @@ transition: all 0.3s ease;
 //  background-color: #0f1113;
 
 export const StyledImageSpan = styled.span`
-    color: white;
+    color: #1a1a1a;
     line-height: 120%;
     margin-top: 16px;`
 

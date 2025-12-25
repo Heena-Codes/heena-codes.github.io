@@ -6,7 +6,17 @@ const StyledImage = styled.img<{ $isLoading?: boolean }>`
     display: ${props => props.$isLoading ? 'none' : 'block'};
     max-width: 100%;
     height: 300px;
-        box-shadow: -1px 3px 10px 10px #fffa;
+    box-shadow: 0 0 0 1px #e0e0e0;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background-color: #f5f5f5;
+    padding: 8px;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        border-color: #0077B5;
+        box-shadow: 0 0 0 1px #0077B5;
+    }
 `;
 
 const StyledLoader = styled.div`

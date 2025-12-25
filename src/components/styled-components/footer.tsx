@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 export const StyledFooter = styled.div`
-    color: white;
-    background-color: #c2a574;
-    font-size: 14px;
+    color: #666;
+    background-color: #ffffff;
+    font-size: 12px;
     line-height: 1.5;
     display: block;
-        box-shadow: inset 0 1px 0 #eee;
     padding: 40px 0 0 0;
+    font-weight: 400;
+    letter-spacing: 0;
+    border-top: 1px solid #e0e0e0;
+    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    opacity: 0.7;
 `;

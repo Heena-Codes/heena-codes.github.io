@@ -12,10 +12,10 @@ interface ToolbarProps {
 export const Toolbar = ({ selectedPage }: ToolbarProps) => {
     return <StyledLinks>
         <HomeProfile />
-        <GithubProfile />
-        {/* TBD <PressProfile /> */}
+        {/* <GithubProfile />
+        TBD <PressProfile /> */}
         <BiographyProfile />
-        <LinkedInProfile />
+        {/* <LinkedInProfile /> */}
         <BlogProfile />
     </StyledLinks>
 }

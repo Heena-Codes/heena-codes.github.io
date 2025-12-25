@@ -1,6 +1,6 @@
 import React from 'react'
-import { StyledLink } from '../components/styled-components/route'
+import { StyledNavLink } from '../components/styled-components/route'
 
 export const BiographyProfile = () => {
-    return <StyledLink to="/bio">Biography</StyledLink>
+    return <StyledNavLink to="/bio">Biography</StyledNavLink>
 }
