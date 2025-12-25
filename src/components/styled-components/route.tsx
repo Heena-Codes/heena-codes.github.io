@@ -12,6 +12,9 @@ export const StyledLink = styled(Link)`
     border-radius: 3px;
     text-decoration: none;
     transition: all 0.3s ease;
+    :selected {
+     font-weight: bold;
+    }
 `
 
 export const StyledImageLink = styled(Link)`

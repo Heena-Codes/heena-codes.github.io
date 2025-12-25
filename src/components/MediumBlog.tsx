@@ -1,6 +1,10 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { StyledH2Header, StyledH3Header } from "./styled-components/toolbar";
+
+function Loading() {
+    return <h2>🌀 Thinking...</h2>;
+  }
 
 const MediumBlog = () => {
     const [posts, setPosts] = useState([]);
@@ -15,20 +19,26 @@ const MediumBlog = () => {
         });
     };
     useEffect(() => {
-      getPostData();
+        getPostData();
     }, []);
+
+    // if (!posts) {
+    //     return <Loading />
+    // }
 
     return (
       <div style={{ display: 'flex'}}>
-          {posts.map((post) => (
-      <div key={post['guid']} style={{ marginRight: '20px' }}>
-        <StyledH3Header>{post['title']}</StyledH3Header>
-        <p dangerouslySetInnerHTML={{ __html: post['content'] }} />
-        {/* <a href={post['link']} target="_blank" rel="noopener noreferrer">
-          Read more
-        </a> */}
-      </div>
-    ))}
+        {posts.map((post) => (
+                    <Suspense fallback={<Loading />}>
+
+             <div key={post['guid']} style={{ marginRight: '20px' }}>
+                <StyledH3Header>{post['title']}</StyledH3Header>
+             <p dangerouslySetInnerHTML={{ __html: post['content'] }} />
+            </div>
+            </Suspense>
+
+         ))}
+
       </div>
     );
   };

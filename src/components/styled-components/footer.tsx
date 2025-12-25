@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 export const StyledFooter = styled.div`
-    color: #585858;
+    color: white;
+    background-color: #c2a574;
     font-size: 14px;
     line-height: 1.5;
     display: block;

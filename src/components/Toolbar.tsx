@@ -6,7 +6,10 @@ import { BiographyProfile } from '../routes/Biography'
 import { LinkedInProfile } from '../routes/LinkedIn'
 import { StyledLinks } from './styled-components/toolbar'
 
-export const Toolbar = () => {
+interface ToolbarProps {
+    selectedPage?: 'home' | 'blog' | 'bio' 
+}
+export const Toolbar = ({ selectedPage }: ToolbarProps) => {
     return <StyledLinks>
         <HomeProfile />
         <GithubProfile />

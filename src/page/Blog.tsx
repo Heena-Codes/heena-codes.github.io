@@ -7,7 +7,7 @@ import MediumBlog from '../components/MediumBlog'
 export const Blog = () => {
     return <>
     <StyledHeader>
-      <Toolbar />
+      <Toolbar/>
     </StyledHeader>
     <StyledSpacingDiv>
         <StyledH1Header>

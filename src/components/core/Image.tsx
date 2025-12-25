@@ -5,7 +5,8 @@ import styled from 'styled-components';
 const StyledImage = styled.img<{ $isLoading?: boolean }>`
     display: ${props => props.$isLoading ? 'none' : 'block'};
     max-width: 100%;
-    height: auto;
+    height: 300px;
+        box-shadow: -1px 3px 10px 10px #fffa;
 `;
 
 const StyledLoader = styled.div`

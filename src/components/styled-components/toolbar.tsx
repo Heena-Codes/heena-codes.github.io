@@ -58,6 +58,5 @@ transition: all 0.3s ease;
 export const StyledImageSpan = styled.span`
     color: white;
     line-height: 120%;
-    margin-top: 16px;
-    margin-right: 16px;`
+    margin-top: 16px;`
 
