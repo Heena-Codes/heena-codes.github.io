@@ -11,9 +11,9 @@ export const Biography = () => {
       <Toolbar />
     </StyledHeader>
     <StyledSpacingDiv>
-        <StyledH1Header>
-            About Heena Gupta
-        </StyledH1Header>
+        {/* <StyledH1Header>
+            Contributions
+        </StyledH1Header> */}
         <AboutMe />
     </StyledSpacingDiv>  
     <StyledSpacingDiv>

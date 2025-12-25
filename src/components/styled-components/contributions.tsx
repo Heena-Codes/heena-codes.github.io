@@ -18,7 +18,8 @@ export const IntroSection = styled.div`
 `;
 
 export const ContributionSection = styled.div`
-  margin-bottom: 32px;
+  break-inside: avoid;
+  page-break-inside: avoid;
 `;
 
 export const SectionTitle = styled.h3`
@@ -31,9 +32,27 @@ export const SectionTitle = styled.h3`
   text-transform: lowercase;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 8px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+`;
+
+export const SectionContent = styled.div`
+  column-count: 1;
+  column-gap: 32px;
+  column-rule: 1px solid #e0e0e0;
+  
+  @media (min-width: 768px) {
+    column-count: 2;
+  }
+  
+  @media (min-width: 1200px) {
+    column-count: 3;
+  }
 `;
 
 export const ContributionCard = styled.div`
+  break-inside: avoid;
+  page-break-inside: avoid;
   background-color: transparent;
   border-radius: 0;
   padding: 16px 0;
@@ -77,6 +96,8 @@ export const ContributionDescription = styled.div`
 `;
 
 export const TimelineItem = styled.div`
+  break-inside: avoid;
+  page-break-inside: avoid;
   display: flex;
   gap: 16px;
   margin-bottom: 20px;
@@ -121,22 +142,40 @@ export const CompaniesList = styled.div`
   margin-top: 12px;
 `;
 
-export const CompanyTag = styled.span`
+export const CompanyTag = styled.span<{ $brandColor?: string }>`
   background-color: #f5f5f5;
   border: 1px solid #e0e0e0;
-  padding: 4px 10px;
-  border-radius: 3px;
+  padding: 6px 14px;
+  border-radius: 6px;
   font-size: 0.85rem;
   color: #1a1a1a;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   transition: all 0.2s ease;
-  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  cursor: pointer;
+  
+  .logo {
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    filter: grayscale(0.3);
+    transition: all 0.2s ease;
+  }
   
   &:hover {
-    border-color: #0077B5;
-    background-color: #f0f0f0;
+    border-color: ${props => props.$brandColor || '#0077B5'};
+    background-color: ${props => props.$brandColor ? `${props.$brandColor}15` : '#f0f0f0'};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    .logo {
+      filter: grayscale(0);
+      transform: scale(1.1);
+    }
   }
 `;
 

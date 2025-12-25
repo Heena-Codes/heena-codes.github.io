@@ -11,9 +11,9 @@ export const Blog = () => {
       <Toolbar/>
     </StyledHeader>
     <StyledSpacingDiv>
-        <StyledH1Header>
+        {/* <StyledH1Header>
             About My Blogs
-        </StyledH1Header>
+        </StyledH1Header> */}
         <StyledSpacingDiv>
         <StyledH2Header>
             Featured Publications

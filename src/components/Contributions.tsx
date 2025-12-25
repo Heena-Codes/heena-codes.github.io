@@ -3,6 +3,7 @@ import {
   ContributionsContainer,
   IntroSection,
   ContributionSection,
+  SectionContent,
   SectionTitle,
   ContributionCard,
   ContributionTitle,
@@ -72,7 +73,12 @@ export const Contributions = () => {
   ];
 
   const workExperience = {
-    companies: ["Paytm", "Shipsy", "Indus Valley Partners", "Expedia"],
+    companies: [
+      { name: "Paytm", logo: "💳", color: "#00BAF2" },
+      { name: "Shipsy", logo: "🚚", color: "#FF6B35" },
+      { name: "Indus Valley Partners", logo: "📊", color: "#6C5CE7" },
+      { name: "Expedia", logo: "✈️", color: "#FFD900" }
+    ],
     description: "With over ten years of industry experience, Heena has worked across both startups and large organisations. She is passionate about working on diverse problem spaces and continuously expanding her skill set."
   };
 
@@ -126,59 +132,73 @@ export const Contributions = () => {
 
       <ContributionSection>
         <SectionTitle>Open Source & Community Contributions</SectionTitle>
-        {openSourceContributions.map((contribution, index) => (
-          <TimelineItem key={index}>
-            <TimelineYear>{contribution.year}</TimelineYear>
-            <TimelineContent>
-              <ContributionCard>
-                <ContributionTitle>{contribution.title}</ContributionTitle>
-                {contribution.location && (
-                  <ContributionMeta>{contribution.location}</ContributionMeta>
-                )}
-                <ContributionDescription>{contribution.description}</ContributionDescription>
-              </ContributionCard>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </ContributionSection>
-
-      <ContributionSection>
-        <SectionTitle>Work Experience</SectionTitle>
-        <ContributionCard>
-          <ContributionDescription>{workExperience.description}</ContributionDescription>
-          <CompaniesList>
-            {workExperience.companies.map((company, index) => (
-              <CompanyTag key={index}>{company}</CompanyTag>
-            ))}
-          </CompaniesList>
-        </ContributionCard>
+        <SectionContent>
+          {openSourceContributions.map((contribution, index) => (
+            <TimelineItem key={index}>
+              <TimelineYear>{contribution.year}</TimelineYear>
+              <TimelineContent>
+                <ContributionCard>
+                  <ContributionTitle>{contribution.title}</ContributionTitle>
+                  {contribution.location && (
+                    <ContributionMeta>{contribution.location}</ContributionMeta>
+                  )}
+                  <ContributionDescription>{contribution.description}</ContributionDescription>
+                </ContributionCard>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
+        </SectionContent>
       </ContributionSection>
 
       <ContributionSection>
         <SectionTitle>Speaking Engagements</SectionTitle>
-        {speakingEngagements.map((engagement, index) => (
-          <ContributionCard key={index}>
-            <ContributionTitle>{engagement.title}</ContributionTitle>
-            <ContributionMeta>
-              {engagement.year} {engagement.location && `• ${engagement.location}`}
-            </ContributionMeta>
-            <ContributionDescription>{engagement.description}</ContributionDescription>
-          </ContributionCard>
-        ))}
+        <SectionContent>
+          {speakingEngagements.map((engagement, index) => (
+            <ContributionCard key={index}>
+              <ContributionTitle>{engagement.title}</ContributionTitle>
+              <ContributionMeta>
+                {engagement.year} {engagement.location && `• ${engagement.location}`}
+              </ContributionMeta>
+              <ContributionDescription>{engagement.description}</ContributionDescription>
+            </ContributionCard>
+          ))}
+        </SectionContent>
       </ContributionSection>
+      
+      <ContributionSection>
+        <SectionTitle>Professional Experience</SectionTitle>
+        <SectionContent>
+          <ContributionCard>
+            <ContributionDescription>{workExperience.description}</ContributionDescription>
+            <CompaniesList>
+              {workExperience.companies.map((company, index) => (
+                <CompanyTag key={index} $brandColor={company.color}>
+                  <span className="logo">{company.logo}</span>
+                  {company.name}
+                </CompanyTag>
+              ))}
+            </CompaniesList>
+          </ContributionCard>
+          {mentoringActivities.map((activity, index) => (
+            <ContributionCard key={index}>
+              <ContributionTitle>{activity.title}</ContributionTitle>
+              <ContributionMeta>
+                {activity.year} {activity.location && `• ${activity.location}`}
+              </ContributionMeta>
+              <ContributionDescription>{activity.description}</ContributionDescription>
+            </ContributionCard>
+          ))}
+        </SectionContent>
+      </ContributionSection>
+
+{/* 
 
       <ContributionSection>
         <SectionTitle>Mentoring & Education</SectionTitle>
-        {mentoringActivities.map((activity, index) => (
-          <ContributionCard key={index}>
-            <ContributionTitle>{activity.title}</ContributionTitle>
-            <ContributionMeta>
-              {activity.year} {activity.location && `• ${activity.location}`}
-            </ContributionMeta>
-            <ContributionDescription>{activity.description}</ContributionDescription>
-          </ContributionCard>
-        ))}
-      </ContributionSection>
+        <SectionContent>
+
+        </SectionContent>
+      </ContributionSection> */}
 
       <ImpactStatement>
         {impactStatement}
