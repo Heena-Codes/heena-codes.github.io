@@ -1,0 +1,24 @@
+{
+  "short_name": "Heena Gupta",
+  "name": "Heena Gupta - Engineering Manager Portfolio",
+  "description": "Portfolio of Heena Gupta, Engineering Manager at Expedia Group, showcasing open source contributions, professional experience, and speaking engagements.",
+  "icons": [
+    {
+      "src": "heena.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary"
+}
+
