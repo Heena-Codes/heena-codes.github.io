@@ -58,13 +58,12 @@ export const ContributionCard = styled.div`
   padding: 16px 0;
   margin-bottom: 20px;
   transition: all 0.2s ease;
-  border-left: 2px solid #e0e0e0;
+  border-left: 1px solid #d0d0d0;
   padding-left: 16px;
   font-weight: 400;
   
   &:hover {
-    border-left-color: #0077B5;
-    padding-left: 20px;
+    border-left-color: #1a1a1a;
   }
 `;
 
@@ -143,13 +142,13 @@ export const CompaniesList = styled.div`
 `;
 
 export const CompanyTag = styled.span<{ $brandColor?: string }>`
-  background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
+  background-color: transparent;
+  border: 1px solid #d0d0d0;
   padding: 6px 14px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 0.85rem;
   color: #1a1a1a;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   display: inline-flex;
   align-items: center;
@@ -162,19 +161,16 @@ export const CompanyTag = styled.span<{ $brandColor?: string }>`
     font-size: 1.2rem;
     display: inline-flex;
     align-items: center;
-    filter: grayscale(0.3);
+    filter: grayscale(0.5);
     transition: all 0.2s ease;
   }
   
   &:hover {
-    border-color: ${props => props.$brandColor || '#0077B5'};
-    background-color: ${props => props.$brandColor ? `${props.$brandColor}15` : '#f0f0f0'};
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #1a1a1a;
+    background-color: transparent;
     
     .logo {
       filter: grayscale(0);
-      transform: scale(1.1);
     }
   }
 `;
@@ -186,7 +182,7 @@ export const ImpactStatement = styled.div`
   margin-top: 32px;
   font-size: 1rem;
   line-height: 1.8;
-  border-left: 2px solid #0077B5;
+  border-left: 1px solid #d0d0d0;
   padding-left: 16px;
   color: #1a1a1a;
   font-weight: 400;

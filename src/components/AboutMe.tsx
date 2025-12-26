@@ -12,51 +12,28 @@ const BioText = styled.div`
 `;
 
 const WhiteboardSection = styled.div`
-    background-color: #f8f9fa;
-    border: 2px solid #dee2e6;
-    border-radius: 8px;
-    padding: 32px;
-    margin-top: 32px;
-    position: relative;
-    
-    &::before {
-        content: '📋 Open Source Projects & Code';
-        position: absolute;
-        top: -14px;
-        left: 20px;
-        background-color: #ffffff;
-        padding: 0 12px;
-        font-weight: 600;
-        font-size: 1.1rem;
-        color: #495057;
-    }
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid #d0d0d0;
+    border-radius: 0;
+    padding: 24px 0;
+    margin-top: 24px;
     
     @media (max-width: 768px) {
-        padding: 24px 16px;
-        margin-top: 24px;
-        
-        &::before {
-            font-size: 0.95rem;
-            left: 12px;
-        }
+        padding: 20px 0;
+        margin-top: 20px;
     }
     
     @media (max-width: 480px) {
-        padding: 20px 12px;
-        border-radius: 6px;
-        
-        &::before {
-            font-size: 0.85rem;
-            left: 8px;
-        }
+        padding: 16px 0;
     }
 `;
 
 const DiagramContainer = styled.div`
     column-count: 1;
-    column-gap: 32px;
-    column-rule: 2px solid #dee2e6;
-    margin-top: 20px;
+    column-gap: 24px;
+    column-rule: 1px solid #d0d0d0;
+    margin-top: 16px;
     
     @media (min-width: 768px) {
         column-count: 2;
@@ -68,170 +45,126 @@ const DiagramContainer = styled.div`
 `;
 
 const ProjectBox = styled.div`
-    background-color: #ffffff;
-    border: 2px solid #007bff;
-    border-radius: 8px;
-    padding: 20px;
+    background-color: transparent;
+    border: 1px solid #d0d0d0;
+    border-radius: 0;
+    padding: 12px;
     position: relative;
-    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     
     &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25);
-    }
-    
-    &::before {
-        content: '◆';
-        position: absolute;
-        left: -12px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.5rem;
-        color: #007bff;
+        border-color: #1a1a1a;
     }
     
     @media (max-width: 768px) {
-        padding: 16px;
-        
-        &::before {
-            font-size: 1.2rem;
-            left: -10px;
-        }
+        padding: 10px;
     }
     
     @media (max-width: 480px) {
-        padding: 12px;
-        border-radius: 6px;
-        
-        &::before {
-            font-size: 1rem;
-            left: -8px;
-        }
+        padding: 8px;
     }
 `;
 
 const ReactCard = styled(ProjectBox)`
-    border-color: #61dafb;
-    background: linear-gradient(135deg, #ffffff 0%, #f0fcff 100%);
+    border-color: #d0d0d0;
+    background: transparent;
     
     &:hover {
-        box-shadow: 0 4px 12px rgba(97, 218, 251, 0.3);
-    }
-    
-    &::before {
-        content: '⚛';
-        color: #61dafb;
-    }
-    
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 60px;
-        height: 60px;
-        background: radial-gradient(circle at top right, rgba(97, 218, 251, 0.1) 0%, transparent 70%);
-        border-radius: 0 8px 0 0;
-        pointer-events: none;
+        border-color: #1a1a1a;
     }
 `;
 
 const ProjectTitle = styled.h3`
-    margin: 0 0 12px 0;
-    color: #007bff;
-    font-size: 1.2rem;
-    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    font-weight: 400;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
     
     @media (max-width: 768px) {
-        font-size: 1.1rem;
-        gap: 6px;
+        font-size: 0.9rem;
+        gap: 4px;
     }
     
     @media (max-width: 480px) {
-        font-size: 1rem;
+        font-size: 0.85rem;
         flex-wrap: wrap;
     }
 `;
 
 const ReactTitle = styled(ProjectTitle)`
-    color: #149eca;
+    color: #1a1a1a;
 `;
 
 const ProjectDescription = styled.p`
-    margin: 0 0 16px 0;
-    color: #495057;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    margin: 0 0 12px 0;
+    color: #666;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
     
     @media (max-width: 768px) {
-        font-size: 0.9rem;
-        line-height: 1.5;
+        font-size: 0.75rem;
+        line-height: 1.4;
     }
     
     @media (max-width: 480px) {
-        font-size: 0.85rem;
+        font-size: 0.7rem;
     }
 `;
 
 const LinksContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 12px;
+    gap: 8px;
+    margin-top: 8px;
     
     @media (max-width: 480px) {
-        gap: 8px;
+        gap: 6px;
     }
 `;
 
 const ProjectLink = styled.a`
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 12px;
-    background-color: #e7f3ff;
-    border: 1px solid #007bff;
-    border-radius: 4px;
-    color: #007bff;
+    gap: 4px;
+    padding: 4px 8px;
+    background-color: transparent;
+    border: 1px solid #d0d0d0;
+    border-radius: 0;
+    color: #1a1a1a;
     text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
+    font-size: 0.7rem;
+    font-weight: 400;
     transition: all 0.2s ease;
+    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
     
     &:hover {
-        background-color: #007bff;
-        color: #ffffff;
-    }
-    
-    &::before {
-        content: '→';
-        font-weight: 700;
+        border-color: #1a1a1a;
     }
     
     @media (max-width: 768px) {
-        font-size: 0.8rem;
-        padding: 5px 10px;
+        font-size: 0.65rem;
+        padding: 3px 6px;
     }
     
     @media (max-width: 480px) {
-        font-size: 0.75rem;
-        padding: 4px 8px;
-        gap: 4px;
+        font-size: 0.6rem;
+        padding: 2px 4px;
+        gap: 2px;
     }
 `;
 
 const ReactLink = styled(ProjectLink)`
-    background-color: #e6f7ff;
-    border-color: #61dafb;
-    color: #149eca;
+    background-color: transparent;
+    border-color: #d0d0d0;
+    color: #1a1a1a;
     
     &:hover {
-        background-color: #61dafb;
-        color: #282c34;
+        border-color: #1a1a1a;
     }
 `;
 
@@ -242,53 +175,36 @@ const ConnectionLine = styled.div`
 const ProjectWrapper = styled.div`
     break-inside: avoid;
     page-break-inside: avoid;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 `;
 
 const TimelineLabel = styled.div`
-    text-align: center;
-    color: #6c757d;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin: 0 0 12px 0;
-    font-family: 'Courier New', monospace;
-    background-color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 2px solid #dee2e6;
-    display: inline-block;
+    text-align: left;
+    color: #999;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    display: block;
     width: 100%;
     box-sizing: border-box;
 `;
 
 const CertificationCard = styled(ProjectBox)`
-    border-color: #28a745;
-    background: linear-gradient(135deg, #ffffff 0%, #f0fff4 100%);
+    border-color: #d0d0d0;
+    background: transparent;
     
     &:hover {
-        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
-    }
-    
-    &::before {
-        content: '🎓';
-        color: #28a745;
-    }
-    
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 60px;
-        height: 60px;
-        background: radial-gradient(circle at top right, rgba(40, 167, 69, 0.1) 0%, transparent 70%);
-        border-radius: 0 8px 0 0;
-        pointer-events: none;
+        border-color: #1a1a1a;
     }
 `;
 
 const CertificationTitle = styled(ProjectTitle)`
-    color: #28a745;
+    color: #1a1a1a;
 `;
 
 const CertificationLink = styled(ProjectLink)`

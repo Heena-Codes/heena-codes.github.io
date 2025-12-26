@@ -106,9 +106,8 @@ const OpportunityMessage = styled.div`
   margin-left: -20px;
   padding: 16px 20px;
   background: #ffffff;
-  border: 2px solid #0077B5;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.15);
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
   font-size: 0.95rem;
   line-height: 1.6;
   color: #495057;
@@ -123,18 +122,18 @@ const OpportunityMessage = styled.div`
     height: 0;
     border-style: solid;
     border-width: 12px 20px 12px 0;
-    border-color: transparent #0077B5 transparent transparent;
+    border-color: transparent #d0d0d0 transparent transparent;
   }
   
   &::after {
     content: '';
     position: absolute;
-    left: -16px;
-    top: 32px;
+    left: -19px;
+    top: 30px;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 10px 16px 10px 0;
+    border-width: 12px 19px 12px 0;
     border-color: transparent #ffffff transparent transparent;
   }
   
@@ -153,11 +152,13 @@ const OpportunityMessage = styled.div`
     }
     
     &::before {
-      top: -22px;
+      top: -21px;
+      border-color: transparent #d0d0d0 transparent transparent;
     }
     
     &::after {
-      top: -18px;
+      top: -20px;
+      border-color: transparent #ffffff transparent transparent;
     }
   }
   
@@ -169,8 +170,8 @@ const OpportunityMessage = styled.div`
 `;
 
 const HighlightText = styled.span`
-  color: #0077B5;
-  font-weight: 600;
+  color: #1a1a1a;
+  font-weight: 500;
 `;
 
 interface MainPageContent {
