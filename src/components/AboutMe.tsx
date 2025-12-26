@@ -30,6 +30,26 @@ const WhiteboardSection = styled.div`
         font-size: 1.1rem;
         color: #495057;
     }
+    
+    @media (max-width: 768px) {
+        padding: 24px 16px;
+        margin-top: 24px;
+        
+        &::before {
+            font-size: 0.95rem;
+            left: 12px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        padding: 20px 12px;
+        border-radius: 6px;
+        
+        &::before {
+            font-size: 0.85rem;
+            left: 8px;
+        }
+    }
 `;
 
 const DiagramContainer = styled.div`
@@ -70,6 +90,25 @@ const ProjectBox = styled.div`
         font-size: 1.5rem;
         color: #007bff;
     }
+    
+    @media (max-width: 768px) {
+        padding: 16px;
+        
+        &::before {
+            font-size: 1.2rem;
+            left: -10px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        padding: 12px;
+        border-radius: 6px;
+        
+        &::before {
+            font-size: 1rem;
+            left: -8px;
+        }
+    }
 `;
 
 const ReactCard = styled(ProjectBox)`
@@ -106,6 +145,16 @@ const ProjectTitle = styled.h3`
     display: flex;
     align-items: center;
     gap: 8px;
+    
+    @media (max-width: 768px) {
+        font-size: 1.1rem;
+        gap: 6px;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
 `;
 
 const ReactTitle = styled(ProjectTitle)`
@@ -117,6 +166,15 @@ const ProjectDescription = styled.p`
     color: #495057;
     font-size: 0.95rem;
     line-height: 1.6;
+    
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 0.85rem;
+    }
 `;
 
 const LinksContainer = styled.div`
@@ -124,6 +182,10 @@ const LinksContainer = styled.div`
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 12px;
+    
+    @media (max-width: 480px) {
+        gap: 8px;
+    }
 `;
 
 const ProjectLink = styled.a`
@@ -148,6 +210,17 @@ const ProjectLink = styled.a`
     &::before {
         content: '→';
         font-weight: 700;
+    }
+    
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        gap: 4px;
     }
 `;
 
@@ -234,6 +307,14 @@ const CertificationMeta = styled.div`
     color: #666;
     margin-bottom: 12px;
     font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 0.75rem;
+    }
 `;
 
 const CertificationBadge = styled.div`
@@ -248,6 +329,17 @@ const CertificationBadge = styled.div`
     color: #28a745;
     font-weight: 500;
     margin-top: 8px;
+    
+    @media (max-width: 768px) {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        gap: 4px;
+    }
 `;
 
 export const AboutMe = () => {

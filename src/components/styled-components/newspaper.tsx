@@ -9,14 +9,21 @@ export const NewspaperColumnLayout = styled.div`
   
   @media (min-width: 768px) {
     column-count: 2;
+    column-gap: 24px;
   }
   
   @media (min-width: 1024px) {
     column-count: 3;
+    column-gap: 32px;
   }
   
   @media (min-width: 1440px) {
     column-count: 4;
+  }
+  
+  @media (max-width: 480px) {
+    column-gap: 0;
+    column-rule: none;
   }
 `;
 
@@ -53,6 +60,16 @@ export const NewspaperCard = styled.div`
       transparent 16px
     );
   }
+  
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    margin-bottom: 28px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 16px 0;
+    margin-bottom: 24px;
+  }
 `;
 
 // Common newspaper-themed date
@@ -82,6 +99,19 @@ export const NewspaperTitle = styled.h3`
   border-top: 3px double #000;
   padding-top: 12px;
   margin-top: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    padding-top: 10px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    padding-top: 8px;
+    letter-spacing: -0.3px;
+  }
 `;
 
 // Base content styles for newspaper theme

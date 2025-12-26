@@ -5,11 +5,74 @@ import { StyledImageLink } from './styled-components/route';
 import { Contributions } from './Contributions';
 import styled from 'styled-components';
 
+const ResponsiveContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-direction: row;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  width: 300px;
+  height: 300px;
+  borderRadius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 150px;
+    height: 150px;
+  }
+`;
+
+const ContentContainer = styled.div`
+  flex: 1;
+  
+  @media (max-width: 768px) {
+    text-align: center;
+    width: 100%;
+  }
+`;
+
 const SocialIconsContainer = styled.div`
   display: flex;
   gap: 16px;
   margin-top: 16px;
   align-items: center;
+  flex-wrap: wrap;
+  
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 12px;
+  }
 `;
 
 const SocialIconLink = styled.a<{ $brandColor?: string }>`
@@ -28,6 +91,13 @@ const SocialIconLink = styled.a<{ $brandColor?: string }>`
     width: 24px;
     height: 24px;
   }
+  
+  @media (max-width: 480px) {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
 `;
 
 interface MainPageContent {
@@ -45,17 +115,9 @@ export const MainHomePageContent = () => {
     }]
 
     return <div>
-        <div style={{ display: 'flex', width: '100%', alignItems: 'flex-start', gap: '20px', marginBottom: '20px' }}>
-            <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start' }}>
-                <div style={{
-                    width: '300px',
-                    height: '300px',
-                    borderRadius: '50%',
-                    overflow: 'hidden',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
+        <ResponsiveContainer>
+            <ImageContainer>
+                <ImageWrapper>
                     <Image 
                         src="./heena.png"
                         alt="Heena Gupta"
@@ -66,9 +128,9 @@ export const MainHomePageContent = () => {
                             borderRadius: '50%'
                         }}
                     />
-                </div>
-            </div>
-            <div style={{ flex: '1' }}>
+                </ImageWrapper>
+            </ImageContainer>
+            <ContentContainer>
         {
             aboutMe.map(aboutMeItem => aboutMeItem.type === 'H1' ? <StyledH1Header>{aboutMeItem.text} </StyledH1Header> : <StyledH2Header>{aboutMeItem.text}</StyledH2Header>)
         }
@@ -99,8 +161,8 @@ export const MainHomePageContent = () => {
                         </svg>
                     </SocialIconLink>
                 </SocialIconsContainer>
-            </div>
-        </div>
+            </ContentContainer>
+        </ResponsiveContainer>
         <div style={{ width: '100%' }}>
             <Contributions />
         </div>
