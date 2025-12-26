@@ -33,7 +33,7 @@ function registerValidSW(swUrl, config) {
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
-      console.log('Service Worker registered:', registration);
+      console.log('Service Worker registered successfully:', registration.scope);
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
         if (installingWorker == null) {
@@ -57,7 +57,8 @@ function registerValidSW(swUrl, config) {
       };
     })
     .catch((error) => {
-      console.error('Error during service worker registration:', error);
+      console.warn('Service worker registration failed (site will still work):', error);
+      // Don't throw - allow the app to continue working without service worker
     });
 }
 

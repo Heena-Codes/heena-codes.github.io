@@ -7,15 +7,13 @@ import { LinkedInProfile } from '../routes/LinkedIn'
 import { StyledLinks } from './styled-components/toolbar'
 
 interface ToolbarProps {
-    selectedPage?: 'home' | 'blog' | 'bio' 
+    selectedPage?: 'home' | 'blog' | 'contributions' 
 }
 export const Toolbar = ({ selectedPage }: ToolbarProps) => {
     return <StyledLinks>
         <HomeProfile />
-        {/* <GithubProfile />
-        TBD <PressProfile /> */}
-        <BiographyProfile />
-        {/* <LinkedInProfile /> */}
         <BlogProfile />
+        <BiographyProfile />
+
     </StyledLinks>
 }

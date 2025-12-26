@@ -93,10 +93,10 @@ export const StyledLinks = styled.div`
   z-index: 1000;
   padding: 16px 0;
   margin: -16px 0 16px 0;
-  opacity: 0.7;
+
   
   :hover {
-      opacity: 1;
+        color:rgb(151, 58, 58);
     }
     
   @media (max-width: 768px) {

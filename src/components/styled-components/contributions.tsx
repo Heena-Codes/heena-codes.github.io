@@ -32,12 +32,40 @@ export const SectionTitle = styled.h3`
   border-bottom: 1px solid #e0e0e0;
   break-inside: avoid;
   page-break-inside: avoid;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+
+export const SectionTitleLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  color: #1a1a1a;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  &:hover {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+  
+  @media (max-width: 768px) {
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
 `;
 
 export const SectionContent = styled.div`
   column-count: 1;
   column-gap: 32px;
-  column-rule: 1px solid #e0e0e0;
   
   @media (min-width: 768px) {
     column-count: 2;
@@ -88,6 +116,32 @@ export const ContributionDescription = styled.div`
   font-weight: 400;
   line-height: 1.7;
   font-family: 'Georgia', 'Times New Roman', serif;
+`;
+
+export const MediaContainer = styled.div`
+  margin-top: 12px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #d0d0d0;
+`;
+
+export const MediaImage = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
+`;
+
+export const MediaVideo = styled.video`
+  width: 100%;
+  height: auto;
+  display: block;
+`;
+
+export const MediaIframe = styled.iframe`
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
 `;
 
 export const TimelineItem = styled.div`
@@ -253,17 +307,23 @@ export const TimelineYearLabel = styled.div`
   }
 `;
 
-export const TimelineEventCard = styled.div`
+export const TimelineEventCard = styled.div<{ $isClickable?: boolean }>`
   background-color: transparent;
-  border: 1px solid #d0d0d0;
-  border-radius: 0;
   padding: 16px;
   transition: all 0.2s ease;
   height: 100%;
   font-family: 'Georgia', 'Times New Roman', serif;
+  cursor: ${props => props.$isClickable ? 'pointer' : 'default'};
+  text-decoration: none;
+  color: inherit;
+  display: block;
   
   &:hover {
     border-color: #1a1a1a;
+    ${props => props.$isClickable && `
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    `}
   }
   
   @media (max-width: 768px) {
@@ -278,10 +338,36 @@ export const TimelineEventTitle = styled.div`
   color: #1a1a1a;
   font-family: 'Georgia', 'Times New Roman', serif;
   line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   
   @media (max-width: 768px) {
     font-size: 0.9rem;
     margin-bottom: 6px;
+  }
+`;
+
+export const CompanyLogo = styled.img`
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    width: 28px;
+    height: 28px;
+  }
+`;
+
+export const CompanyLogoFallback = styled.span`
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
   }
 `;
 
@@ -308,5 +394,100 @@ export const TimelineEventDescription = styled.div`
     font-size: 0.8rem;
     line-height: 1.5;
   }
+`;
+
+export const TypeTag = styled.span<{ $type?: 'open-source' | 'speaking' | 'mentoring' | 'work' }>`
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  margin-top: 8px;
+  
+  ${props => {
+    switch (props.$type) {
+      case 'open-source':
+        return `
+          background-color: #e3f2fd;
+          color: #1565c0;
+          border: 1px solid #90caf9;
+        `;
+      case 'mentoring':
+        return `
+          background-color: #fce4ec;
+          color: #c2185b;
+          border: 1px solid #f48fb1;
+        `;
+      case 'speaking':
+        return `
+          background-color: #fff3e0;
+          color: #ef6c00;
+          border: 1px solid #ffb74d;
+        `;
+      case 'work':
+        return `
+          background-color: #f3e5f5;
+          color: #7b1fa2;
+          border: 1px solid #ce93d8;
+        `;
+      default:
+        return `
+          background-color: #f5f5f5;
+          color: #616161;
+          border: 1px solid #e0e0e0;
+        `;
+    }
+  }}
+  
+  @media (max-width: 768px) {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+`;
+
+export const TimelineYearGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 220px;
+  max-width: 280px;
+  flex: 1 1 220px;
+  
+  @media (max-width: 768px) {
+    min-width: 180px;
+    max-width: 100%;
+    flex: 1 1 180px;
+  }
+`;
+
+export const SkillTag = styled.span<{ $color?: string }>`
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.3px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  margin: 4px 4px 0 0;
+  background-color: ${props => props.$color || '#f5f5f5'};
+  color: #1a1a1a;
+  border: 1px solid ${props => props.$color ? `${props.$color}dd` : '#e0e0e0'};
+  opacity: 0.9;
+  
+  @media (max-width: 768px) {
+    font-size: 0.6rem;
+    padding: 3px 8px;
+  }
+`;
+
+export const SkillTagsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
 `;
 
