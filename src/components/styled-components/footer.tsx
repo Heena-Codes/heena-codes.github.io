@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
-    color: #666;
+    color: #1a1a1a;
     background-color: #ffffff;
     font-size: 11px;
     line-height: 1.4;
@@ -15,7 +15,7 @@ export const StyledFooter = styled.footer`
     font-weight: 400;
     letter-spacing: 0.3px;
     border-top: 1px solid #e0e0e0;
-    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-family: 'Georgia', 'Times New Roman', serif;
     opacity: 0.7;
     width: 100%;
     box-sizing: border-box;
@@ -50,12 +50,12 @@ export const FooterLinks = styled.div`
 `;
 
 export const FooterLink = styled.a`
-    color: #666;
+    color: #1a1a1a;
     text-decoration: none;
     transition: all 0.2s ease;
+    font-family: 'Georgia', 'Times New Roman', serif;
     
     &:hover {
-        color: #1a1a1a;
         text-decoration: underline;
     }
 `;

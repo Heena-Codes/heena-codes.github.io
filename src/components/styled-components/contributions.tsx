@@ -7,14 +7,15 @@ export const ContributionsContainer = styled.div`
   color: #1a1a1a;
   line-height: 1.7;
   font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', sans-serif;
+  font-family: 'Georgia', 'Times New Roman', serif;
 `;
 
 export const IntroSection = styled.div`
   margin-bottom: 24px;
   font-size: 1rem;
-  color: #666;
+  color: #1a1a1a;
   line-height: 1.8;
+  font-family: 'Georgia', 'Times New Roman', serif;
 `;
 
 export const ContributionSection = styled.div`
@@ -26,10 +27,10 @@ export const SectionTitle = styled.h3`
   font-size: 1.1rem;
   color: #1a1a1a;
   margin-bottom: 20px;
-  letter-spacing: 0;
-  font-weight: 500;
-  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
-  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  text-transform: uppercase;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 8px;
   break-inside: avoid;
@@ -61,6 +62,7 @@ export const ContributionCard = styled.div`
   border-left: 1px solid #d0d0d0;
   padding-left: 16px;
   font-weight: 400;
+  font-family: 'Georgia', 'Times New Roman', serif;
   
   &:hover {
     border-left-color: #1a1a1a;
@@ -73,25 +75,26 @@ export const ContributionTitle = styled.div`
   margin-bottom: 8px;
   color: #1a1a1a;
   letter-spacing: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', sans-serif;
+  font-family: 'Georgia', 'Times New Roman', serif;
 `;
 
 export const ContributionMeta = styled.div`
   font-size: 0.85rem;
   margin-bottom: 8px;
   font-weight: 400;
-  color: #666;
+  color: #1a1a1a;
   letter-spacing: 0;
-  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
-  opacity: 0.8;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  opacity: 0.6;
 `;
 
 export const ContributionDescription = styled.div`
   font-size: 0.95rem;
   margin-top: 8px;
-  color: #666;
+  color: #1a1a1a;
   font-weight: 400;
   line-height: 1.7;
+  font-family: 'Georgia', 'Times New Roman', serif;
 `;
 
 export const TimelineItem = styled.div`
@@ -121,13 +124,13 @@ export const TimelineYear = styled.div`
   min-width: 60px;
   font-weight: 400;
   font-size: 0.85rem;
-  color: #666;
+  color: #1a1a1a;
   background-color: transparent;
   border: none;
   padding: 4px 0;
   text-align: left;
-  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
-  opacity: 0.8;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  opacity: 0.6;
 `;
 
 export const TimelineContent = styled.div`
@@ -154,7 +157,7 @@ export const CompanyTag = styled.span<{ $brandColor?: string }>`
   align-items: center;
   gap: 8px;
   transition: all 0.2s ease;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Georgia', 'Times New Roman', serif;
   cursor: pointer;
   
   .logo {
@@ -187,5 +190,6 @@ export const ImpactStatement = styled.div`
   color: #1a1a1a;
   font-weight: 400;
   position: relative;
+  font-family: 'Georgia', 'Times New Roman', serif;
 `;
 

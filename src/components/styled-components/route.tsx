@@ -21,23 +21,24 @@ export const StyledNavLink = styled(NavLink)`
     top: 8px;
     right: 6px;
     padding: 8px 12px;
-    color: #666;
+    color: #1a1a1a;
     font-size: 13px;
     line-height: 1.35;
     border-radius: 3px;
     text-decoration: none;
     transition: all 0.3s ease;
-    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-family: 'Georgia', 'Times New Roman', serif;
     font-weight: 400;
+    opacity: 0.7;
     
     &:hover {
-        color: #1a1a1a;
+        opacity: 1;
     }
     
     &.active {
-        color: #1a1a1a;
+        opacity: 1;
         font-weight: 600;
-        border-bottom: 2px solid #0077B5;
+        border-bottom: 2px solid #1a1a1a;
     }
 `
 

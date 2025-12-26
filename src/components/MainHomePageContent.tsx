@@ -110,8 +110,8 @@ const OpportunityMessage = styled.div`
   border-radius: 8px;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #495057;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: #1a1a1a;
+  font-family: 'Georgia', 'Times New Roman', serif;
   
   &::before {
     content: '';
@@ -172,6 +172,7 @@ const OpportunityMessage = styled.div`
 const HighlightText = styled.span`
   color: #1a1a1a;
   font-weight: 500;
+  font-family: 'Georgia', 'Times New Roman', serif;
 `;
 
 interface MainPageContent {

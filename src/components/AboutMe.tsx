@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const AboutMeContainer = styled.div`
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-family: 'Georgia', 'Times New Roman', serif;
     color: #1a1a1a;
     line-height: 1.7;
 `;
@@ -82,7 +82,7 @@ const ProjectTitle = styled.h3`
     display: flex;
     align-items: center;
     gap: 6px;
-    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-family: 'Georgia', 'Times New Roman', serif;
     
     @media (max-width: 768px) {
         font-size: 0.9rem;
@@ -101,10 +101,11 @@ const ReactTitle = styled(ProjectTitle)`
 
 const ProjectDescription = styled.p`
     margin: 0 0 12px 0;
-    color: #666;
+    color: #1a1a1a;
     font-size: 0.8rem;
     line-height: 1.5;
-    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    opacity: 0.8;
     
     @media (max-width: 768px) {
         font-size: 0.75rem;
@@ -140,7 +141,7 @@ const ProjectLink = styled.a`
     font-size: 0.7rem;
     font-weight: 400;
     transition: all 0.2s ease;
-    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-family: 'Georgia', 'Times New Roman', serif;
     
     &:hover {
         border-color: #1a1a1a;
@@ -180,11 +181,11 @@ const ProjectWrapper = styled.div`
 
 const TimelineLabel = styled.div`
     text-align: left;
-    color: #999;
+    color: #1a1a1a;
     font-size: 0.7rem;
     font-weight: 400;
     margin: 0 0 8px 0;
-    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-family: 'Georgia', 'Times New Roman', serif;
     background-color: transparent;
     padding: 0;
     border-radius: 0;
@@ -192,6 +193,7 @@ const TimelineLabel = styled.div`
     display: block;
     width: 100%;
     box-sizing: border-box;
+    opacity: 0.6;
 `;
 
 const CertificationCard = styled(ProjectBox)`
@@ -220,9 +222,10 @@ const CertificationLink = styled(ProjectLink)`
 
 const CertificationMeta = styled.div`
     font-size: 0.85rem;
-    color: #666;
+    color: #1a1a1a;
     margin-bottom: 12px;
-    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    opacity: 0.6;
     
     @media (max-width: 768px) {
         font-size: 0.8rem;

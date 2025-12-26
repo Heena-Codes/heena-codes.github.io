@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const StyledHeader = styled.div`
   padding: 40px;
   color: #1a1a1a;
-  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-family: 'Georgia', 'Times New Roman', serif;
   
   @media (max-width: 768px) {
     padding: 24px 20px;
@@ -23,7 +23,7 @@ letter-spacing: -1px;
 line-height: 1.2;
 color: #1a1a1a;
 font-weight: 400;
-font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+font-family: 'Georgia', 'Times New Roman', serif;
 margin-bottom: 8px;
 
 @media (max-width: 768px) {
@@ -50,12 +50,12 @@ margin-top: 4px;
 `
 export const StyledH2Header = styled.h2`
 font-size: 1.2rem;
-color: #666;
+color: #1a1a1a;
 letter-spacing: 0;
 margin-top: 4px;
 font-weight: 300;
-font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
-opacity: 0.9;
+font-family: 'Georgia', 'Times New Roman', serif;
+opacity: 0.7;
 
 @media (max-width: 768px) {
   font-size: 1.1rem;
@@ -82,8 +82,8 @@ export const StyledLinks = styled.div`
   display: flex;
   justify-content: end;
   font-size: 13px;
-  color: #666;
-  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  color: #1a1a1a;
+  font-family: 'Georgia', 'Times New Roman', serif;
   font-weight: 400;
   gap: 16px;
   flex-wrap: wrap;
@@ -93,11 +93,10 @@ export const StyledLinks = styled.div`
   z-index: 1000;
   padding: 16px 0;
   margin: -16px 0 16px 0;
-  // border-bottom: 1px solid #e0e0e0;
-  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  opacity: 0.7;
   
   :hover {
-      color: #1a1a1a;
+      opacity: 1;
     }
     
   @media (max-width: 768px) {
