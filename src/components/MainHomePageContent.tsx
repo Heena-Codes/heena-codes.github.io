@@ -100,6 +100,79 @@ const SocialIconLink = styled.a<{ $brandColor?: string }>`
   }
 `;
 
+const OpportunityMessage = styled.div`
+  position: relative;
+  margin-top: 20px;
+  margin-left: -20px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 2px solid #0077B5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.15);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #495057;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 20px 12px 0;
+    border-color: transparent #0077B5 transparent transparent;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 32px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 16px 10px 0;
+    border-color: transparent #ffffff transparent transparent;
+  }
+  
+  @media (max-width: 768px) {
+    margin-top: 24px;
+    margin-left: 0;
+    padding: 14px 18px;
+    font-size: 0.9rem;
+    text-align: center;
+    
+    &::before,
+    &::after {
+      left: 50%;
+      top: -20px;
+      transform: translateX(-50%) rotate(-90deg);
+    }
+    
+    &::before {
+      top: -22px;
+    }
+    
+    &::after {
+      top: -18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    margin-top: 20px;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+  }
+`;
+
+const HighlightText = styled.span`
+  color: #0077B5;
+  font-weight: 600;
+`;
+
 interface MainPageContent {
     text: string;
     link?: string | null;
@@ -110,7 +183,7 @@ export const MainHomePageContent = () => {
         text: 'Heena Gupta',
         type: 'H1'
     }, {
-        text: 'Engineering Leader',
+        text: 'Engineering Manager, Expedia Group',
         type: 'H2'
     }]
 
@@ -134,6 +207,9 @@ export const MainHomePageContent = () => {
         {
             aboutMe.map(aboutMeItem => aboutMeItem.type === 'H1' ? <StyledH1Header>{aboutMeItem.text} </StyledH1Header> : <StyledH2Header>{aboutMeItem.text}</StyledH2Header>)
         }
+                <OpportunityMessage>
+                    💡 <HighlightText>Open to opportunities!</HighlightText> I'm always excited to explore new challenges, collaborate on innovative projects, and connect with fellow technologists. Feel free to reach out!
+                </OpportunityMessage>
                 <SocialIconsContainer>
                     <SocialIconLink href="https://medium.com/@heena_gupta_93" target="_blank" rel="noopener noreferrer" aria-label="Medium" $brandColor="#000000">
                         <svg viewBox="0 0 24 24" fill="currentColor">
