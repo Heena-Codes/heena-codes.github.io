@@ -87,6 +87,14 @@ export const StyledLinks = styled.div`
   font-weight: 400;
   gap: 16px;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1000;
+  padding: 16px 0;
+  margin: -16px 0 16px 0;
+  // border-bottom: 1px solid #e0e0e0;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   
   :hover {
       color: #1a1a1a;
@@ -96,6 +104,7 @@ export const StyledLinks = styled.div`
     justify-content: flex-start;
     gap: 12px;
     font-size: 12px;
+    padding: 12px 0;
   }
 `;
 
