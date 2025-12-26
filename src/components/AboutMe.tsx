@@ -12,17 +12,9 @@ const BioText = styled.div`
 `;
 
 const WhiteboardSection = styled.div`
-    background-color: transparent;
-    border: none;
-    border-top: 1px solid #d0d0d0;
-    border-radius: 0;
-    padding: 24px 0;
-    margin-top: 24px;
     
     @media (max-width: 768px) {
-        padding: 20px 0;
-        margin-top: 20px;
-    }
+        padding: 20px 0;    }
     
     @media (max-width: 480px) {
         padding: 16px 0;
